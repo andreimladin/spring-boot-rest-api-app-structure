@@ -8,6 +8,7 @@ import ro.aimsoft.springboot.rest.dto.UserCreationDTO;
 import ro.aimsoft.springboot.rest.dto.UserDTO;
 import ro.aimsoft.springboot.rest.service.UserService;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
@@ -21,7 +22,7 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody UserCreationDTO userCreationDTO) {
+    public void create(@RequestBody @Valid UserCreationDTO userCreationDTO) {
         userService.createUser(userCreationDTO);
     }
 

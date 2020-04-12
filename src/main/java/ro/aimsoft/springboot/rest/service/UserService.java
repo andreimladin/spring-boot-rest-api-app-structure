@@ -3,9 +3,9 @@ package ro.aimsoft.springboot.rest.service;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ro.aimsoft.springboot.rest.dto.UserCreationDTO;
-import ro.aimsoft.springboot.rest.dto.UserDTO;
-import ro.aimsoft.springboot.rest.entity.User;
+import ro.aimsoft.springboot.rest.model.dto.UserCreationDTO;
+import ro.aimsoft.springboot.rest.model.dto.UserDTO;
+import ro.aimsoft.springboot.rest.model.entity.User;
 import ro.aimsoft.springboot.rest.repository.UserRepository;
 
 import javax.persistence.EntityNotFoundException;

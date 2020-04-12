@@ -1,25 +1,24 @@
-package ro.aimsoft.springboot.rest.dto;
+package ro.aimsoft.springboot.rest.model.entity;
 
-import javax.validation.constraints.*;
+import javax.persistence.*;
 import java.util.UUID;
 
-public class UserDTO {
+@Entity
+@Table(name = "user")
+public class User {
 
-    @NotNull
+    @Id
     private UUID id;
 
-    @Email
     private String email;
 
-    @Size(min=8, max=20)
+    private String password;
+
     private String firstName;
 
-    @Size(min=8, max=20)
     private String lastName;
 
-    @Min(0)
-    @Max(4)
-    private long active;
+    private Long status;
 
     public UUID getId() {
         return id;
@@ -35,6 +34,14 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -53,11 +60,11 @@ public class UserDTO {
         this.lastName = lastName;
     }
 
-    public long getActive() {
-        return active;
+    public Long getStatus() {
+        return status;
     }
 
-    public void setActive(long active) {
-        this.active = active;
+    public void setStatus(Long status) {
+        this.status = status;
     }
 }

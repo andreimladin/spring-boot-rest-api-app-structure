@@ -1,11 +1,10 @@
 package ro.aimsoft.springboot.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import ro.aimsoft.springboot.rest.dto.UserCreationDTO;
-import ro.aimsoft.springboot.rest.dto.UserDTO;
+import ro.aimsoft.springboot.rest.model.dto.UserCreationDTO;
+import ro.aimsoft.springboot.rest.model.dto.UserDTO;
 import ro.aimsoft.springboot.rest.service.UserService;
 
 import javax.validation.Valid;

@@ -1,4 +1,4 @@
-package ro.aimsoft.springboot.rest.dto;
+package ro.aimsoft.springboot.rest.model.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;

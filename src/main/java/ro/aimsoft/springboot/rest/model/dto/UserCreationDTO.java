@@ -6,12 +6,23 @@ import javax.validation.constraints.Size;
 
 public class UserCreationDTO {
 
+    @NotNull
+    private String cnp;
+
     @Email
     private String email;
 
     @NotNull
     @Size(min=8, max=20)
     private String password;
+
+    public String getCnp() {
+        return cnp;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
+    }
 
     public String getEmail() {
         return email;
